@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>선수 검색</title>
+    <style>
+        body { background-color: #f0f2f5; font-family: sans-serif; margin: 0; padding: 0; }
+
+        /* 헤더 스타일 (메인과 통일) */
+        header {
+            background-color: #002147;
+            padding: 15px 30px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-logo { color: white; text-decoration: none; font-weight: bold; font-size: 20px; }
+        .back-btn { color: white; text-decoration: none; font-size: 14px; border: 1px solid white; padding: 5px 10px; border-radius: 5px;}
+
+        /* 컨텐츠 영역 */
+        .container { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        h2 { text-align: center; color: #002147; }
+
+        /* 검색창 */
+        .search-box { text-align: center; margin-bottom: 20px; }
+        .search-box input { padding: 10px; width: 60%; border: 1px solid #ddd; border-radius: 5px; }
+        .search-box button { padding: 10px 20px; background-color: #002147; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+        /* 테이블 스타일 */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f9fa; color: #333; }
+        tr:hover { background-color: #f1f1f1; }
+
+        .team-badge { padding: 4px 8px; border-radius: 10px; font-size: 12px; color: white; background-color: #555; }
+        /* 팀별 색상 (예시) */
+        .kia { background-color: #C30452; }
+        .samsung { background-color: #074CA1; }
+        .lg { background-color: #C30452; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/static" class="header-logo">⚾ ALL IN ONE</a>
+    <a href="/static" class="back-btn">메인으로</a>
+</header>
+
+<div class="container">
+    <h2>선수 검색</h2>
+
+    <div class="search-box">
+        <form action="/players" method="get">
+            <input type="text" name="keyword" th:value="${keyword}" placeholder="선수 이름을 입력하세요...">
+            <button type="submit">검색</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>팀</th>
+            <th>이름</th>
+            <th>포지션</th>
+            <th>타율/ERA</th>
+            <th>특징</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="player : ${players}">
+            <td>
+                <span class="team-badge" th:text="${player.team}">팀</span>
+            </td>
+            <td th:text="${player.name}" style="font-weight:bold;">이름</td>
+            <td th:text="${player.position}">포지션</td>
+            <td th:text="${player.avg}">0.000</td>
+            <td th:text="${player.description}">특징</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div th:if="${players.isEmpty()}" style="text-align: center; padding: 20px; color: #888;">
+        검색 결과가 없습니다.
+    </div>
+</div>
+
+</body>
+</html>
