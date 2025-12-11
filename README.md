@@ -2,9 +2,7 @@
 > **Spring Boot & JPA 기반의 올인원 야구 정보 제공 및 팬 커뮤니티 플랫폼**
 >
 
-<img width="911" height="849" alt="image" src="https://github.com/user-attachments/assets/2f243f39-1e7c-4e61-bb34-70e9681523cd" />
-
-*(※ 프로젝트 실행 화면 캡처나 로고 이미지가 있다면 여기에 넣으세요)*
+<img width="321" height="784" alt="image" src="https://github.com/user-attachments/assets/c9c5293c-f1af-46b6-b80c-c3c8e3aa52cb" />
 
 <br>
 
@@ -38,7 +36,8 @@
 ## 💾 데이터베이스 설계 (ERD)
 회원과 선수 간의  N:M 관계 를 해소하기 위해 중간 테이블(`Favorite`)을 설계하여 데이터 무결성을 확보했습니다.
 
-<img width="286" height="456" alt="image" src="https://github.com/user-attachments/assets/4689bfbe-924d-40aa-bc77-5b33a98d4857" />
+<img width="339" height="834" alt="image" src="https://github.com/user-attachments/assets/2a18b746-f86e-4e8c-aed9-dc705e6df855" />
+
 
 <br>
 
