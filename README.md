@@ -2,7 +2,8 @@
 > **Spring Boot & JPA 기반의 올인원 야구 정보 제공 및 팬 커뮤니티 플랫폼**
 >
 
-<img width="321" height="784" alt="image" src="https://github.com/user-attachments/assets/c9c5293c-f1af-46b6-b80c-c3c8e3aa52cb" />
+<img width="911" height="849" alt="image" src="https://github.com/user-attachments/assets/3725cea3-71f1-4c8a-82a6-f9c83f523a69" />
+
 
 <br>
 
@@ -28,7 +29,8 @@
 ## ⚙️ 시스템 아키텍처 (Architecture)
 본 프로젝트는 **MVC (Model-View-Controller) 패턴**을 준수하여 설계되었습니다.
 
-<img width="227" height="541" alt="image" src="https://github.com/user-attachments/assets/94446f01-e8d6-43fd-b2fc-4b4214f9f19d" />
+<img width="321" height="784" alt="image" src="https://github.com/user-attachments/assets/cd30681e-0e1f-4f80-98f5-e7b8143e6cd3" />
+
 
 
 <br>
